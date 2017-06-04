@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "xxhblog",
+    "password": "xxhblog",
+    "database": "myblog",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
