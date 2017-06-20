@@ -1,0 +1,31 @@
+<footer class="footer">
+    <p>
+        © Powered by
+        <a href="https://nodejs.org/en/" target="_blank"> Node.js </a>&
+        <a href="http://www.expressjs.com.cn/" target="_blank"> Express </a>&
+        <a href="https://www.mongodb.org/" target="_blank"> MongoDB </a>&
+        <a href="http://echarts.baidu.com/index.html" target="_blank"> Echarts </a>&
+        <a href="http://amazeui.org/" target="_blank"> AmazeUI </a>
+    </p>
+</footer>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.amazeui.org/amazeui/2.5.2/js/amazeui.min.js"></script>
+<script src="http://cdn.amazeui.org/amazeui/2.5.2/js/amazeui.ie8polyfill.min.js"></script>
+<script>
+	$(function(){
+		$('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top-220;
+					$('html,body').animate({
+						scrollTop: targetOffset
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	})
+</script>
+</html>

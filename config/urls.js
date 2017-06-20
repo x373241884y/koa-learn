@@ -47,38 +47,4 @@ module.exports = function (app, settings) {
 		console.log('config---->url:' + url + ' with method:' + (method || 'get'));
 		router[method || 'get'](url, ctrl);
 	}
-
-	//
-	// //重写render方法，给所有的render view添加request,response,session
-	// function rewriteRender() {
-	// 	var render = app.response.render;
-	// 	app.response.errorProxy = function (error) {
-	// 		console.log(error);
-	// 		errorProxy.apply(this, [error]);
-	// 	};
-	// 	app.response.render = function (view, options, callback) {
-	// 		var res, req, session, done;
-	// 		res = this;
-	// 		req = res.req;
-	// 		session = req.session;
-	//
-	// 		if (typeof options == "function") {
-	// 			done = options;
-	// 			options = {
-	// 				request: req,
-	// 				response: res,
-	// 				session: session
-	// 			};
-	// 		} else {
-	// 			options = options || {};
-	// 			options.request = req;
-	// 			options.response = res;
-	// 			options.session = session;
-	// 			done = callback;
-	// 		}
-	// 		options.utils = viewUtils;
-	// 		options.doSEO = seoUtils;
-	// 		render.apply(res, [view, options, done]);
-	// 	};
-	// }
 };

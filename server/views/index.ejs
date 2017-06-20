@@ -1,17 +1,80 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>EJS Welcome to <%= title %></p>
-  <%
-  console.log(session);
-  console.log(request);
-  console.log(response);
-  console.log(marked);
- %>
-  </body>
-</html>
+<% include header.ejs%>
+<div class="get">
+  <div class="am-g">
+    <div class="am-u-lg-12">
+      <h1 class="get-title">在拉钩找工作的正确姿势</h1>
+      <p>
+        拉钩职位数据分析，希望能对你找工作和跳槽有所帮助。
+      </p>
+      <p>
+        <a href="#detail" class="am-btn am-btn-sm get-btn">Get Start</a>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="detail" id="detail">
+  <div class="am-g am-container">
+    <div class="am-u-lg-12">
+      <h2 class="detail-h2">本项目对如下几个方面提供参考</h2>
+      <div class="am-g">
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-pie-chart am-icon-sm"></i>
+            多少职位？
+          </h3>
+          <p class="detail-p">
+            根据工作年限统计职位数，看看目前职位数，决定要不要跳槽.....
+          </p>
+          <a href="/workyear" class="am-btn am-btn-secondary am-round">去看看多少职位</a>
+        </div>
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-send-o am-icon-sm"></i>
+            怎么写简历？
+          </h3>
+          <p class="detail-p">
+            Amaze UI 非常注重性能，基于轻量的 Zepto.js 开发，并使用 CSS3 来做动画交互，平滑、高效，更适合移动设备，让你的 Web 应用可以高速载入。
+          </p>
+          <a href="/resume" class="am-btn am-btn-secondary am-round">去看看怎么写简历</a>
+        </div>
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-rmb am-icon-sm"></i>
+            要多少钱？
+          </h3>
+          <p class="detail-p">
+            根据工作年限计算出拉钩各个年限中薪资的最小值、最大值、平均值。给予薪资方面的参考。
+          </p>
+          <a href="/salary" class="am-btn am-btn-secondary am-round">去看看要多少钱</a>
+        </div>
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-money am-icon-sm"></i>
+            去那个公司？
+          </h3>
+          <p class="detail-p">
+            钱都给不了还谈什么理想，谈什么人生~
+          </p>
+          <a href="/mostsalary" class="am-btn am-btn-secondary am-round">去看看土豪公司</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hope">
+  <div class="am-g am-container">
+    <div class="am-u-lg-4 am-u-md-6 am-u-sm-12 hope-img">
+      <img src='./images/meng.jpg' style="width:250px" alt="" data-am-scrollspy="{animation:'slide-left', repeat: false}">
+      <hr class="am-article-divider am-show-sm-only hope-hr">
+    </div>
+    <div class="am-u-lg-8 am-u-md-6 am-u-sm-12">
+      <h2 class="hope-title">希望对你找工作有所帮助</h2>
+      <p>
+        在互联网的寒冬里，优秀的人也不会找不到工作，如果找不到工作，记得趁这个时候提升自己，别忘了点Star哦！
+      </p>
+    </div>
+  </div>
+</div>
+
+<% include footer.ejs%>
