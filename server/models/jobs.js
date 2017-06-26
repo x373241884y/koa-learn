@@ -1,11 +1,7 @@
 var mongoose = require('mongoose'),
-	config = require('./config'),
 	common = require('../utils/common');
-var mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-var uri = 'mongodb://' + config.host + ':' + config.port + '/' + config.db;
-var db = mongoose.createConnection(uri);
-db.on('error', console.error.bind(console, '连接错误:'));
+var db = require('../utils/db');
+
 var JobSchema = new mongoose.Schema({
 	positionId: Number,
 	positionName: String,
